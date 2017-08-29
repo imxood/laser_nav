@@ -1,0 +1,14 @@
+<launch>
+	<arg name="laser_type" default="3i" />
+
+	<!-- laser -->
+	<include file="$(find laser_nav)/launch/includes/$(arg laser_type)_laser.launch" />
+
+	<!-- Gmapping -->
+	<arg name="custom_gmapping_launch_file" default="$(find laser_nav)/launch/includes/gmapping/$(arg laser_type)_gmapping.launch.xml"/>
+	<include file="$(arg custom_gmapping_launch_file)"/>
+
+	<!-- Move base -->
+	<include file="$(find laser_nav)/launch/includes/move_base.launch.xml"/>
+
+</launch>
