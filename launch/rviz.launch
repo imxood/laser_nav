@@ -1,0 +1,6 @@
+<launch>
+
+	<node name="rviz" pkg="rviz" type="rviz" required="true"
+	  args="-d $(find cartographer_turtlebot)/configuration_files/demo_turtlebot.rviz" />
+
+</launch>
