@@ -15,4 +15,6 @@
 
 	<include file="$(find laser_nav)/launch/rviz.launch" />
 
+	<include file="$(find iiiroboticslidar)/launch/3iroboticslidar.launch" />
+
 </launch>
